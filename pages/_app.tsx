@@ -1,6 +1,12 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import { Fragment } from "react";
+import { GlobalStyle } from "../styles/global.styles";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Fragment>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </Fragment>
+  );
 }
